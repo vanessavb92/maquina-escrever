@@ -1,0 +1,46 @@
+
+body {
+  height: 100vh;
+  background: radial-gradient(rgb(224, 146, 81), #ebebeb);
+  font-family: 'Geo', sans-serif;
+  font-size: 4vw;
+}
+
+.text {
+  margin-left: 20%;
+  border-right: 2px solid red;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text--animation {
+  animation: blinkcursor 0.50s steps(50) infinite normal, type 5.5s steps(40) 1s normal, breack 4.5s steps(20) 6s normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 81vw;
+  }
+}
+
+@keyframes blinkcursor {
+  from {
+  border-right: 2px solid rgb(251, 82, 4);
+  }
+  to {
+    border-right: transparent;
+  }
+}
+
+@keyframes breack {
+  from {
+    width: 81vw;
+  }
+  to {
+    width: 0;
+  }
+}
